@@ -13,6 +13,7 @@
         }
 
         p {
+            font-size: 40px;
             color: red;
             background-color: #e0ffff;
             text-align: justify;
@@ -35,6 +36,49 @@
             text-transform: capitalize;
             text-indent: 50px;
         }
+
+        a:link {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        a:visited {
+            /*已访问 */
+            color: #e0ffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            /*停留 */
+            color: aqua;
+            text-decoration: underline;
+        }
+
+        a:active {
+            /*点击时 */
+            color: red;
+            text-decoration: underline;
+        }
+
+        table,th,td{
+            border: 1px solid green;
+        }
+        table{
+            width: 100%;
+
+        }
+        th{
+            height: 50px;
+            background-color: green;
+            color: white;
+            
+        }
+
+        td{
+            padding: 15px;
+            text-align: right;
+        }
+
     </style>
 </head>
 
@@ -44,7 +88,22 @@
     <p class="uppercase">This is some text.</p>
     <p class="lowercase">This is some text.</p>
     <p class="capitalize">This is some text.</p>
+    <b><a href="./table.html" target="_blank">这是一个链接</a></b>
 
+    <table>
+        <tr>
+            <th>FistName</th>
+            <th>LastName</th>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+    </table>
 </body>
 
 </html>
