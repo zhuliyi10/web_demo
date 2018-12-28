@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html dom的基本使用</title>
+    
+</head>
+
+<body>
+    <div id='content'>
+            <p id="p1">find element by id</p>
+            <div><span>find element by span</span></div>
+            <p class="p2">find element by class</p>
+    </div>
+    
+</body>
+<script>
+    var p1=document.getElementById("p1");
+    p1.innerHTML= "has changed by id";
+    p1.style.color='blue';
+    p1.style.backgroundColor='#818181'
+
+    // create new element
+    var newP=document.createElement('p');
+    var contentP=document.createTextNode("this is new P");
+    newP.appendChild(contentP);
+    var content=document.getElementById('content');
+    console.log(content);
+    content.insertBefore(newP,p1);
+
+    var sp=document.getElementsByTagName('span');
+    console.log(sp[0].innerHTML);
+    sp[0].innerHTML='has changed by tag';
+    document.getElementsByClassName('p2')[0].innerHTML="has changed by classname"
+
+</script>
+</html>
