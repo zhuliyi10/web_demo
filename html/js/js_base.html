@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js基本使用</title>
+    <script>
+        // 显示日期
+        // innerHTML 往html元素添加内容
+        function displayData() {
+            var element = document.getElementById('date');
+            element.innerHTML = new Date();
+            console.log("这是一个log")
+        }
+        var addCount=(function count(){
+            var counter=0;
+            function increase(){
+                counter++;
+                document.getElementById('count').innerHTML=counter;
+            }
+            return increase;
+        })();
+        
+
+    </script>
+</head>
+
+<body>
+    <p id="date">这里显示日期</p>
+    <button type="button" onclick="displayData()">显示日期</button>
+    <button type="button" onclick="alert('hello world')">弹出对话框</button>
+
+    <p id="count">闭包使用</p>
+    <button type="button" onclick="addCount()">计数</button>
+</body>
+
+</html>

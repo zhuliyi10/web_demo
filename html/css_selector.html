@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css选择器</title>
+
+    <style>
+        div p{
+            background-color: yellow;
+        }
+        div>p{
+            color: blue;
+        }
+        div+p{
+            background-color: brown;
+        }
+        div~p{
+            color: cadetblue;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>子选择器</p>
+        <span><p>后代选择器</p></span>
+    </div>
+    <p>
+        相邻兄弟选择器
+    </p>
+    <p>
+        后续兄弟选择器
+    </p>
+
+    
+</body>
+
+</html>
