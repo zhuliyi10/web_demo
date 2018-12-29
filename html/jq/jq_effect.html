@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery 效果</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#hide').click(function () {
+                $('p').hide(300, function () {
+                    alert('文本已经被隐藏')
+                });
+            });
+            $('#show').click(function () {
+                $('p').show(300);
+            });
+
+            $('#fadeOut').click(function () {
+                $('p').fadeOut(300, function () {
+                    alert('文本已经被隐藏')
+                });
+            });
+            $('#fadeIn').click(function () {
+                $('p').fadeIn(300);
+            });
+            $('#slideDown').click(function () {
+                $('p').slideDown(300, function () {
+
+                });
+            });
+            $('#slideUp').click(function () {
+                $('p').slideUp(300);
+            });
+            $('#animate').click(function () {
+                $('div').animate({ left: '250px',opacity:'0.5',width:'100px',height:'100px'},5000);
+            });
+            $('#stop_animate').click(function () {
+                $('div').stop();
+            });
+        });
+    </script>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide">hide</button>
+    <button id="show">show</button><br>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button><br>
+    <button id="slideDown">slideDown</button>
+    <button id="slideUp">slideUp</button><br>
+    <button id="animate">animate</button>
+    <button id="stop_animate"> stop animate</button><br>
+    <p>如果你点击“隐藏” 按钮，我将会消失。</p>
+    <div>animate动画的测试</div>
+
+</body>
+
+</html>

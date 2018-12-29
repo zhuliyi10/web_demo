@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery ajax</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#load').click(function(){
+                $('#div1').load('../../static/ajax_info.txt',function(responseText,textStatus,xhr){
+                    if(textStatus=='success'){
+                        alert("外部内容加载成功!");
+                    }else{
+                        alert("Error: "+xhr.status+": "+xhr.statusText);
+                    }
+                });
+            });
+
+            $('#get').click(function(){
+                $.get('demo_test.php',function(data,status){
+                    alert('data:'+data+'\n status'+status);
+                });
+            });
+            
+            $('#post').click(function(){
+                $.post('demo_test.php',{
+                    name:'自学教程',
+                    url:'http://www.baidu.com'
+                },function(data,status){
+                    alert('data:'+data+'\n status'+status);
+                });
+            });
+        });
+        
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>使用 jQuery AJAX 修改文本内容</h2>
+    </div>
+    <button id="load">获取外部内容</button><br>
+    <button id="get">get</button><br>
+    <button id="post">post</button><br>
+</body>
+
+</html>
